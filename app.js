@@ -14,12 +14,24 @@ function agregarAmigo() {
         return;
     }
     amigosArray.push(inputAmigo);
-    
+
     limpiarCampo();
+    llenarArray();
 }
 
-function limpiarCampo(){
+function limpiarCampo() {
     document.getElementById("amigo").value = '';
 }
 
+function llenarArray () {
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+    
+
+    for (let i = 0; i < amigosArray.length; i++) {
+        let nuevoLi = document.createElement("li");
+        nuevoLi.innerHTML = amigosArray[i];
+        lista.appendChild(nuevoLi);
+    }
+}
 
