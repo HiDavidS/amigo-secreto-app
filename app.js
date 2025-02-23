@@ -6,8 +6,20 @@ let amigosArray = [];
 
 //Funciones
 
-function agregarAmigo(params) {
-    let amigosArray = document.getElementById('amigo').value;
+function agregarAmigo() {
+    let inputAmigo = document.getElementById("amigo").value;
     
+    if (inputAmigo.trim() === "") {
+        alert("Por favor, inserte un nombre.")
+        return;
+    }
+    amigosArray.push(inputAmigo);
+    
+    limpiarCampo();
 }
+
+function limpiarCampo(){
+    document.getElementById("amigo").value = '';
+}
+
 
