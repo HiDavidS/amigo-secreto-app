@@ -35,3 +35,9 @@ function llenarArray () {
     }
 }
 
+function sorteoAmigo (){
+    if (amigosArray.length > 0) {
+        let amigoRandom =  Math.floor(Math.random() * amigosArray.length);
+    }
+}
+
