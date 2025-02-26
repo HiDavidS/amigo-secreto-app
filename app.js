@@ -17,6 +17,7 @@ function agregarAmigo() {
 
     limpiarCampo();
     llenarArray();
+    
 }
 
 function limpiarCampo() {
@@ -33,11 +34,14 @@ function llenarArray () {
         nuevoLi.innerHTML = amigosArray[i];
         lista.appendChild(nuevoLi);
     }
+    
 }
 
 function sorteoAmigo (){
     if (amigosArray.length > 0) {
         let amigoRandom =  Math.floor(Math.random() * amigosArray.length);
+        let amigoSeleccionado = amigosArray[amigoRandom];
+        document.getElementById("resultado").innerHTML = `El amigo sorteado es: ${amigoSeleccionado}`;
     }
 }
 
